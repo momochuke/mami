@@ -2,7 +2,7 @@
 <html>
   <head>
     <style>
-      /*I sucks at coding :> */
+      /*I suck at coding :3 */
       
       @import url('https://fonts.googleapis.com/css2?family=Mochiy+Pop+P+One&display=swap');
 
@@ -12,7 +12,7 @@
       display: flex;
       justify-content: center;
       align-items: center;
-      background-color: #f2acac;
+      background-color: #ffcaca;
       font-family: 'Mochiy Pop P One', sans-serif;
     }
 
@@ -44,7 +44,7 @@
       position: absolute;
       width: 480px;
       height: 650px;
-      background-color: #d04e4e;
+      background-color: #ff8787;
       top: 10px;
       left: 10px;
       
@@ -52,7 +52,7 @@
 
     .card-inside {
       position: absolute;
-      background-color: #fff0f3;
+      background-color: #ffcdcd;
       width: 500px;
       height: 670px;
       z-index:-1;
@@ -99,7 +99,7 @@
       display: flex;
       align-items: center;
       text-align: center;
-      filter: drop-shadow(0 0 20px rgba(0,0,0,0.9));
+      filter: drop-shadow(0 0 20px rgba(0,0,0,0.5));
     }
 
     /* heart front*/
@@ -152,95 +152,94 @@
       top:120px;
     }
 
-    .heart {
-      position: relative;
-      background-color: #f50202;
-      height: 60px;
-      width:60px;
-      top:330px;
-      left:220px;
-      transform: rotate(-45deg);
-      -webkit-animation: .8s beat infinite;
-      -webkit-animation-delay: -6s;
-    }
-      
-    .heart:before, .heart:after {
-      content:"";
-      background-color: #f50202;
-      border-radius:50%;
-      height: 60px;
-      width: 60px;
-      position: absolute;
-    }
-      
-    .heart:before {
-      top:-30px;
-      left:0;
-    }
-      
-    .heart:after {
-      left:30px;
-      top:0;
+    .gif {
+      margin-top: 297px;
+      margin-left: 1px;
     }
 
-    .smile {
-      position: absolute;
-      width:30px;
-      height:15px;
-      background-color: #333;
-      z-index:1;
-      border-radius: 0 0 100px 100px;
-      top:350px;
-      left:235px;
-      overflow: hidden;
+    .wrapper span {
+    position: fixed;
+    bottom: -40px;
+    animation: animate 7s linear infinite;
+    font-size: 60px;
+    z-index: -1;
+    color: red;
     }
 
-    .smile:before {
-      content:"";
-      position: absolute;
-      border-radius:50%;
-      width:20px;
-      height:20px;
-      background-color: #030202;
-      top:5px;
-      left:5px;
+    .wrapper span:nth-child(1){
+        left: 60px;
+        animation-delay: 0.6s;    
+    }
+    .wrapper span:nth-child(2){
+        left: 10%;
+        animation-delay: 3s;  
+    }
+    .wrapper span:nth-child(3){
+        left: 20%;
+        animation-delay: 2s;    
+    }
+    .wrapper span:nth-child(4){
+        left: 30%;
+        animation-delay: 5s;   
+    }
+    .wrapper span:nth-child(5){
+        left: 40%;
+        animation-delay: 1s;    
+    }
+    .wrapper span:nth-child(6){
+        left: 50%;
+        animation-delay: 7s;    
+    }
+    .wrapper span:nth-child(7){
+        left: 60%;
+        animation-delay: 6s;  
+    }
+    .wrapper span:nth-child(8){
+        left: 70%;
+        animation-delay: 8s;    
+    }
+    .wrapper span:nth-child(9){
+        left: 80%;
+        animation-delay: 6s;  
+    }
+    .wrapper span:nth-child(10){
+        left: 90%;
+        animation-delay: 4s;    
+    }
+    .wrapper span:nth-child(11){
+        left: 100%;
+        animation-delay: 0.6s;    
+    }
+    .wrapper span:nth-child(12){
+        left: 110%;
+        animation-delay: 3s;  
+    }
+    .wrapper span:nth-child(13){
+        left: 120%;
+        animation-delay: 2s;    
+    }
+    .wrapper span:nth-child(14){
+        left: 130%;
+        animation-delay: 5s;   
+    }
+    .wrapper span:nth-child(15){
+        left: 140%;
+        animation-delay: 1s;    
     }
 
-    .eyes {
-      position: absolute;
-      border-radius: 50%;
-      background-color: #333;
-      width:10px;
-      height:10px;
-      z-index:1;
-      top:340px;
-      left:265px;
-      box-shadow: -40px 0 #333;
-      transform-origin: 50%;
-    }
-
-    @keyframes close {
-        0%, 100% {
-            -webkit-transform: scale(1, .05);
+    @keyframes animate{
+        0% {
+          transform: translateY(0);
+            opacity: 1
         }
-        5%, 95% {
-            -webkit-transform: scale(1, 1);
+        70%{
+            opacity: .8;
         }
-    }
-
-    @keyframes beat {
-      0%, 40%, 100% {
-        -webkit-transform: scale(2) rotate(-45deg);
-      }
-      25%, 60% {
-        -webkit-transform: scale(1.1) rotate(-45deg);
-      }
-    }
-
-    .invisible {
-    visibility: hidden;
-    }
-      
+        100% {
+          transform: translateY(-800px) rotate(360deg);	
+            opacity: 0
+        }
+}
     </style>
   </head>
   <body>
@@ -256,9 +255,27 @@
         <div class="heart"></div>
         <div class="smile"></div>
         <div class="eyes"></div>
-        
+        <img class="gif" src="love-animated.gif">
     </div>
     
+    <div class="wrapper">
+      <span>&#10084</span>
+      <span>&#10084</span>
+      <span>&#10084</span>
+      <span>&#10084</span>
+      <span>&#10084</span>
+      <span>&#10084</span>
+      <span>&#10084</span>
+      <span>&#10084</span>
+      <span>&#10084</span>
+      <span>&#10084</span>
+      <span>&#10084</span>
+      <span>&#10084</span>
+      <span>&#10084</span>
+      <span>&#10084</span>
+      <span>&#10084</span>
+  </div>
+
     </div>
   </body>
 </html>
