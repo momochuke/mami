@@ -7,7 +7,8 @@
       @import url('https://fonts.googleapis.com/css2?family=Mochiy+Pop+P+One&display=swap');
 
       body {
-      height: 100vh;
+      margin-top: 500px;
+      margin-right: 200px;
       display: flex;
       justify-content: center;
       align-items: center;
@@ -31,8 +32,8 @@
     .card-front {
       position: relative;
       background-color: #fff0f3;
-      width: 300px;
-      height:300px;
+      width: 500px;
+      height: 670px;
       transform-origin: left;
       box-shadow: inset 100px 20px 100px rgba(0,0,0,.15), 30px 0 50px rgba(0,0,0,0.3);
       transition: .3s;
@@ -41,18 +42,19 @@
     .card-front:before {
       content:"";
       position: absolute;
-      width: 280px;
-      height: 280px;
+      width: 480px;
+      height: 650px;
       background-color: #d04e4e;
       top: 10px;
       left: 10px;
+      
     }
 
     .card-inside {
       position: absolute;
       background-color: #fff0f3;
-      width: 300px;
-      height:300px;
+      width: 500px;
+      height: 670px;
       z-index:-1;
       left:0;
       top:0;
@@ -61,8 +63,8 @@
 
     .open {
       position: absolute;
-      width: 300px;
-      height:300px;
+      width: 500px;
+      height: 670px;
       left:0;
       top:0;
       background-color: transparent;
@@ -78,8 +80,8 @@
     #open:checked ~ .card-front:before {
       z-index:5;
       background-color: #fff0f3;
-      width:300px;
-      height:300px;
+      width: 500px;
+      height: 670px;
       top:0;
       left:0;
       box-shadow: inset 100px 20px 100px rgba(0,0,0,.1), 30px 0 50px rgba(0,0,0,0.1);
@@ -87,23 +89,24 @@
 
     .note {
       position: relative;
-      width: 200px;
-      height: 150px;
+      width: 300px;
+      height: 250px;
       background-color: #fff0f3;
-      top:75px;
-      left:50px;
+      top:205px;
+      left:100px;
       color: #333;
-      font-size:30px;
+      font-size:50px;
       display: flex;
       align-items: center;
       text-align: center;
-      filter: drop-shadow(0 0 20px rgba(0,0,0,0.3));
+      filter: drop-shadow(0 0 20px rgba(0,0,0,0.9));
     }
 
+    /* heart front*/
     .note:before, .note:after {
       position: absolute;
       content:"";
-      background-color: #ba1c1c;
+      background-color: #fa1a1a;
       width: 40px;
       height:40px;
     }
@@ -111,23 +114,23 @@
     .note:before {
       transform: rotate(-45deg);
       top:-20px;
-      left:80px;
+      left:130px;
     }
 
     .note:after {
       border-radius:50%;
       top:-35px;
-      left:65px;
-      box-shadow:30px 0 #ba1c1c;
+      left:115px;
+      box-shadow:30px 0 #fa1a1a;
     }
 
-
+    /*inside*/
     .text-one {
       position: absolute;
       color: #333;
-      font-size: 30px;
-      top:30px;
-      width:300px;
+      font-size: 50px;
+      top:60px;
+      width:500px;
       text-align: center;
     }
 
@@ -135,34 +138,34 @@
       position: absolute;
       left:5px;
       text-align: center;
-      width:300px;
+      width:500px;
     }
 
     .text-one:before {
       content:"Valentine's";
-      top:30px;
+      top:60px;
       color: #d04e4e;
     }
 
     .text-one:after {
       content:"day!";
-      top:60px;
+      top:120px;
     }
 
     .heart {
       position: relative;
-      background-color: #d04e4e;
+      background-color: #f50202;
       height: 60px;
       width:60px;
-      top:180px;
-      left:120px;
+      top:330px;
+      left:220px;
       transform: rotate(-45deg);
       animation: .8s beat infinite;
     }
       
     .heart:before, .heart:after {
       content:"";
-      background-color: #d04e4e;
+      background-color: #f50202;
       border-radius:50%;
       height: 60px;
       width: 60px;
@@ -186,8 +189,8 @@
       background-color: #333;
       z-index:1;
       border-radius: 0 0 100px 100px;
-      top:200px;
-      left:135px;
+      top:350px;
+      left:235px;
       overflow: hidden;
     }
 
@@ -209,12 +212,31 @@
       width:10px;
       height:10px;
       z-index:1;
-      top:190px;
-      left:165px;
+      top:340px;
+      left:265px;
       box-shadow: -40px 0 #333;
       transform-origin: 50%;
-      -webkit-animation: close 2s infinite;
     }
+
+    @keyframes close {
+        0%, 100% {
+            -webkit-transform: scale(1, .05);
+        }
+        5%, 95% {
+            -webkit-transform: scale(1, 1);
+        }
+    }
+
+    @keyframes beat {
+      0%, 40%, 100% {
+        -webkit-transform: scale(1) rotate(-45deg);
+      }
+      25%, 60% {
+        -webkit-transform: scale(1.1) rotate(-45deg);
+      }
+    }
+
+   
       
     </style>
   </head>
@@ -231,7 +253,9 @@
         <div class="heart"></div>
         <div class="smile"></div>
         <div class="eyes"></div>
+        
     </div>
+    
     </div>
   </body>
 </html>
